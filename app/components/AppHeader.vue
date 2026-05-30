@@ -140,8 +140,12 @@ const onEscape = () => {
     padding: 16px 16px 0;
     gap: 40px;
     &.home {
-        position: fixed;
+        position: sticky;
         top: 0;
+        margin-bottom: -80px;
+        @media (--md) {
+            margin-bottom: -104px;
+        }
     }
     @media (--md) {
         padding: 40px 32px 0;

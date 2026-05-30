@@ -12,6 +12,7 @@
 
 <style lang="postcss" scoped>
 .layout-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

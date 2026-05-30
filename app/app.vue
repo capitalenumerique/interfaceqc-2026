@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import IconExternal from '@/assets/svg/external.svg?component';
+
 const i18nHead = useLocaleHead();
 
 const { locale, t } = useI18n();
@@ -42,6 +44,13 @@ useSeoMeta({
 </script>
 
 <template>
+    <AnnouncementBar>
+        {{ t("Vous consultez l’édition 2026 de l'événement.") }}
+        <a :href="t('https://interfaceqc.com/')" target="_blank">
+            <span>{{ t('Voir la plus récente') }}</span>
+            <IconExternal />
+        </a>
+    </AnnouncementBar>
     <NuxtLayout>
         <NuxtLoadingIndicator :height="5" color="#333230" :throttle="500" />
         <NuxtPage />
@@ -63,7 +72,10 @@ useSeoMeta({
 <i18n lang="json">
 {
     "en": {
-        "Découvre Interface, l'événement incontournable du numérique, créé par et pour la communauté!": "Discover Interface, the must-attend digital event created by and for the community!"
+        "Découvre Interface, l'événement incontournable du numérique, créé par et pour la communauté!": "Discover Interface, the must-attend digital event created by and for the community!",
+        "Vous consultez l’édition 2026 de l'événement.": "You’re viewing the 2026 edition of the event.",
+        "Voir la plus récente": "View the latest",
+        "https://interfaceqc.com/": "https://interfaceqc.com/en/"
     }
 }
 </i18n>
