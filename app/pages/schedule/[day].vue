@@ -10,6 +10,7 @@ definePageMeta({
     i18n: {
         paths: {
             fr: '/programmation/[day]',
+            en: '/schedule/[day]',
         },
     },
 });
